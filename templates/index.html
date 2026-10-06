@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCR API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <main class="container">
+
+        <h1>OCR API</h1>
+
+        <p class="description">
+            Questo programma permette di caricare un'immagine e di estrarre
+            automaticamente il testo presente al suo interno tramite un'API OCR.
+        </p>
+
+        <div class="upload-section">
+        
+            <!-- Area per il caricamento -->
+            <div class="drop-zone" id="drop-zone">
+
+                <p>Trascina qui l'immagine</p>
+
+                <p>oppure</p>
+
+                <label for="file-input" class="file-button">
+                    SFOGLIA FILE
+                </label>
+
+                <input
+                    id="file-input"
+                    type="file"
+                    accept="image/*"
+                    hidden
+                >
+
+            </div>
+
+            <!-- Anteprima dell'immagine -->
+            <div class="preview-box">
+
+                <p id="preview-text">Nessuna immagine selezionata</p>
+
+                <p id="error-text">
+                    Il file allegato NON è un'immagine
+                </p>
+
+                <img
+                    id="image-preview"
+                    src=""
+                    alt="Anteprima dell'immagine"
+                >
+
+            </div>
+        </div>
+
+
+        <button
+            id="extract-button"
+            class="extract-button"
+            disabled >
+            ESTRAI TESTO
+        </button>
+
+
+        <!-- Risultato: inizialmente nascosto -->
+
+        <div id="result" class="result">
+            <p> </p>
+        </div>
+
+
+    </main>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

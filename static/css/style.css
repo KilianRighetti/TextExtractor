@@ -1,0 +1,242 @@
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: Arial, sans-serif;
+
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+
+.container {
+    width: 900px;
+    max-width: 90%;
+
+    margin: 50px auto;
+    padding: 30px;
+
+    background-color: white;
+    border-radius: 10px;
+
+    text-align: center;
+}
+
+
+/* Titolo */
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-family: "Trebuchet MS", sans-serif;
+    font-size: 42px;
+    letter-spacing: 2px;
+}
+
+
+/* Descrizione */
+
+.description {
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    line-height: 1.5;
+}
+
+
+/* Contiene i due riquadri */
+
+.upload-section {
+    display: flex;
+
+    justify-content: center;
+    align-items: stretch;
+
+    gap: 25px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Area drag & drop */
+
+.drop-zone {
+    width: 400px;
+    height: 300px;
+
+    border: 2px dashed #999;
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    box-sizing: border-box;
+
+    background-color: #fafafa;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s,
+        background-color 0.2s;
+}
+
+
+.drop-zone:hover {
+    border-color: #2196f3;
+    background-color: #f7fbff;
+}
+
+
+.drop-zone.drag-over {
+    border-color: #2196f3;
+    background-color: #f0f8ff;
+}
+
+
+.drop-zone p {
+    margin: 5px;
+
+    color: #666;
+
+    pointer-events: none;
+}
+
+
+/* Pulsante "Sfoglia file" */
+
+.file-button {
+    display: inline-block;
+
+    margin-top: 10px;
+    padding: 10px 18px;
+
+    background-color: #555;
+    color: white;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: background-color 0.15s;
+}
+
+
+.file-button:hover {
+    background-color: #333;
+}
+
+
+.file-button:active {
+    background-color: #2196f3;
+}
+
+
+/* Anteprima dell'immagine */
+
+.preview-box {
+    width: 400px;
+    height: 300px;
+
+    border: 2px solid #ccc;
+    border-radius: 8px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    background-color: #fafafa;
+}
+
+
+#preview-text {
+    color: #777;
+}
+
+
+#image-preview {
+    display: none;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: contain;
+}
+
+
+/* Messaggio di errore */
+
+#error-text {
+    display: none;
+
+    color: #d32f2f;
+    font-weight: bold;
+
+    padding: 20px;
+}
+
+
+/* Pulsante principale */
+
+.extract-button {
+    padding: 12px 25px;
+
+    border: none;
+    border-radius: 5px;
+
+    background-color: #555;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: background-color 0.15s;
+}
+
+
+.extract-button:hover:not(:disabled) {
+    background-color: #333;
+}
+
+
+.extract-button:active:not(:disabled) {
+    background-color: #2196f3;
+}
+
+
+.extract-button:disabled {
+    background-color: #bbb;
+
+    cursor: not-allowed;
+}
+
+
+/* Risultato */
+
+.result {
+    display: none;
+
+    margin-top: 30px;
+    padding: 20px;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    background-color: #fafafa;
+
+    text-align: left;
+}
+
+.result h2 {
+    margin-top: 0;
+}

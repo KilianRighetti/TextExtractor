@@ -1,0 +1,8 @@
+PER "config.py":
+- pip install python-dotenv
+
+PER "ocr_provider.py":
+- pip install requests
+
+
+pip install werkzeug
